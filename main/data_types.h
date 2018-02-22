@@ -1,6 +1,6 @@
 #include <cmath>
 #include <string>
-#include <vector>  // The data types will be character, string, array, floating, boolean, uint, sint
+#include <vector>  // The data types will be character, string, array, floating, boolean, unint, sint
 class character {
  public:
   wchar_t self;
@@ -19,8 +19,6 @@ class array_character {
   unsigned long long int length;
   array_character(std::vector<char> sself);
   void back_add(char added);
-  void front_add(char added);
-  void add_after(char added, unsigned long long int index);
   unsigned long long int capacity();
 };
 class array_string {
@@ -29,8 +27,6 @@ class array_string {
   unsigned long long int length;
   array_string(std::vector<std::string> sself);
   void back_add(std::string added);
-  void front_add(std::string added);
-  void add_after(std::string added, unsigned long long int index);
   unsigned long long int capacity();
 };
 class array_floating {
@@ -39,8 +35,6 @@ class array_floating {
   unsigned long long int length;
   array_floating(std::vector<long double> sself);
   void back_add(long double added);
-  void front_add(long double added);
-  void add_after(long double added, unsigned long long int index);
   unsigned long long int capacity();
 };
 class array_boolean {
@@ -49,18 +43,14 @@ class array_boolean {
   unsigned long long int length;
   array_boolean(std::vector<bool> sself);
   void back_add(bool added);
-  void front_add(bool added);
-  void add_after(bool added, unsigned long long int index);
   unsigned long long int capacity();
 };
-class array_uint {
+class array_unint {
  public:
   std::vector<unsigned long long int> self;
   unsigned long long int length;
-  array_uint(std::vector<unsigned long long int> sself);
+  array_unint(std::vector<unsigned long long int> sself);
   void back_add(unsigned long long int added);
-  void front_add(unsigned long long int added);
-  void add_after(unsigned long long int added, unsigned long long int index);
   unsigned long long int capacity();
 };
 class array_sint {
@@ -69,8 +59,6 @@ class array_sint {
   unsigned long long int length;
   array_sint(std::vector<long long int> sself);
   void back_add(long long int added);
-  void front_add(long long int added);
-  void add_after(long long int added, unsigned long long int index);
   unsigned long long int capacity();
 };
 class floating {
